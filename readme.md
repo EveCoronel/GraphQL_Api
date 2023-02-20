@@ -1,11 +1,11 @@
-### Optic Store GraphQL
-# This is a GraphQL API for an online store that allows you to retrieve, create, update, and delete products.
+# Optic Store GraphQL
+### This is a GraphQL API for an online store that allows you to retrieve, create, update, and delete products.
 
 ## Getting Started
-# To get started with this API, you will need to have a GraphQL client installed, such as GraphiQL or Apollo Client.
+### To get started with this API, you will need to have a GraphQL client installed, such as GraphiQL or Apollo Client.
 
 ## API Endpoints
-# The following endpoints are available:
+### The following endpoints are available:
 
 1. getProducts
 Retrieves all products in the store.
