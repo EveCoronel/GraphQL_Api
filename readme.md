@@ -1,59 +1,77 @@
-# Optic Store API
+#### Optic Store GraphQL
+# This is a GraphQL API for an online store that allows you to retrieve, create, update, and delete products.
 
-An API RESTful service for an ecommerce platform selling glasses. This API is built with Express and JavaScript.
+### Getting Started
+# To get started with this API, you will need to have a GraphQL client installed, such as GraphiQL or Apollo Client.
 
-## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+### API Endpoints
+# The following endpoints are available:
 
-## Prerequisites
-What things you need to install the software and how to install them:
+1. getProducts
+Retrieves all products in the store.
 
-[Node.js](https://nodejs.org/en/)
+- Input
+This endpoint takes no input.
 
-[NPM (comes with Node.js)](https://www.npmjs.com/https://www.npmjs.com/)
+- Output
+Returns an array of all products in the store.
 
-### Installing
-A step by step series of examples that tell you how to get a development environment running:
+2. getProductById
+Retrieves a product by its ID.
 
-#### Clone the repository to your local machine:
+- Input
+id (string): The ID of the product to retrieve.
+- Output
+Returns the product with the specified ID.
 
-1. git clone https://github.com/EveCoronel/API_opticStore
+3. getProductsByCategory
+Retrieves all products in a specified category.
 
-2. Install the dependencies:
+- Input
+category (string): The category to filter by.
+- Output
+Returns an array of all products in the specified category.
 
-```
-npm install
-```
+4. saveProduct
+Adds a new product to the store.
 
-3. Start the development server:
+- Input
+title (string): The name of the product.
+category (string): The category of the product.
+description (string): A description of the product.
+price (float): The price of the product.
+thumbnail (string): the thumbnail of the product.
+- Output
+Returns the newly created product.
 
-```
-npm run start
-```
+5. updateProduct
+Updates an existing product in the store.
 
-The API should now be up and running on http://localhost:8080/.
+- Input
+id (string): The ID of the product to update.
+title (string): The name of the product.
+category (string): The category of the product.
+description (string): A description of the product.
+price (float): The price of the product.
+thumbnail (string): the thumbnail of the product.
+- Output
+Returns the updated product.
 
-## Endpoints
-The following endpoints are available in the Optic Store API:
+6. deleteProduct
+Removes a product from the store.
 
-## Product Endpoints
-- GET /api/products: Retrieve a list of all products
-- GET /api/products/:_id: Retrieve a specific product by ID
-- GET /api/products/filter/:category: Retrieve a list of specific products by category
-- POST /api/products/: Create a new product
-- PUT /api/products/:_id: Update a product
-- DELETE /products/:_id: Delete a specific product by ID
+- Input
+id (string): The ID of the product to remove.
+- Output
+Returns a boolean indicating whether the product was successfully removed.
 
+Running the API
+To run the API, you will need to have Node.js installed on your system. Once you have Node.js installed, follow these steps:
 
-### Order Endpoints
+Clone this repository to your local machine.
+Install the dependencies by running npm install.
+Start the server by running npm start.
+Once the server is running, you can access the GraphQL API at http://localhost:4000/graphql. From there, you can use a GraphQL client to send queries and mutations to the API.
 
-
-### Built With
-
-Express - The web framework used
-
-JavaScript - The programming language used
-
-
-#### Authors
-[Evelyn Coronel](https://github.com/EveCoronel) - Initial work
+Conclusion
+This GraphQL API provides basic functionality for managing products in an online store. With the available endpoints, you can retrieve all products, retrieve a specific product by ID, retrieve all products in a specific category, create a new product, update an existing product, and remove a product from the store.
